@@ -35,5 +35,9 @@ export class ProdutoService {
         return axios.get(dataUrl);
     }
 
+    static getMarcasByID(id) {
+        let dataUrl = `${this.baseUrl}/marcas/${id}`;
+        return axios.get(dataUrl);
+    }
 
 }
