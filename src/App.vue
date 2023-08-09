@@ -1,27 +1,30 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
-</script>
-
 <template>
-  <header>
-    <div class="max-w-7l mx-auto">
-      <nav class="m2 p-2">
-        <RouterLink
-          class="px-4 py-2 mr-4 bg-indigo-600 rounded text-white"
-          to="/"
-          >Home</RouterLink
-        >
-        <RouterLink
-          class="px-4 py-2 mr-4 bg-indigo-600 rounded text-white"
-          to="/produtos"
-          >Produtos</RouterLink
-        >
-      </nav>
-    </div>
-  </header>
-
-  <main class="max-w-7l mx-auto min-h-scren">
-    <RouterView />
-  </main>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
+  <router-view/>
 </template>
 
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
